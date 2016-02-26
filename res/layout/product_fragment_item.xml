@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/feed_item_margin"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/feed_item_margin" >
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/feed_item_margin"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_action_person"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_image"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="35dp"
+                android:paddingBottom="5dp"
+                android:text="상품명" />
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="상품가격"
+                android:textColor="@color/wine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_action_person" >
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/profile_id"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="올린이"
+                        android:textSize="@dimen/feed_item_profile_id"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/product_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="시간"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/feed_item_timestamp" />
+                </LinearLayout>
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <!-- <Button
+            android:id="@+id/like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout1"
+            android:layout_alignTop="@+id/linearLayout1"
+            android:layout_marginTop="83dp"
+            android:text="찜하기" /> -->
+
+        <ImageView
+            android:id="@+id/r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout1"
+            android:layout_alignTop="@+id/product_image"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

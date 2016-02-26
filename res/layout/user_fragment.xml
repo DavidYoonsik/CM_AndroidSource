@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/feed_item_profile_info_padd"
+    android:layout_marginRight="@dimen/feed_item_profile_info_padd"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_action_person" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                android:text="올린이"
+                android:textSize="@dimen/feed_item_profile_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profile_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/feed_item_status_pad_left_right"
+                android:text="상점 소개가 아직 없습니다."
+                android:textColor="@color/gray"
+                android:textSize="@dimen/feed_item_timestamp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃버튼" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/feed_item_profile_info_padd"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/item_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.33"
+            android:background="@color/light_gray"
+            android:orientation="vertical"
+            android:padding="@dimen/feed_item_profile_info_padd" >
+
+            <TextView
+                android:id="@+id/item_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="@dimen/feed_item_profile_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/item_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/item_label"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/feed_item_timestamp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/following_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="@color/light_gray"
+            android:orientation="vertical"
+            android:padding="@dimen/feed_item_profile_info_padd" >
+
+            <TextView
+                android:id="@+id/following_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="@dimen/feed_item_profile_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/following_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/following_label"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/feed_item_timestamp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/follower_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="@color/light_gray"
+            android:orientation="vertical"
+            android:padding="@dimen/feed_item_profile_info_padd" >
+
+            <TextView
+                android:id="@+id/follower_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="@dimen/feed_item_profile_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/follower_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/follower_label"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/feed_item_timestamp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/feed_item_profile_info_padd"
+        android:orientation="horizontal" >
+
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3" >
+        </GridView>
+        
+    </LinearLayout>
+
+</LinearLayout>

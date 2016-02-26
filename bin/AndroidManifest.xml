@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mobile.cross.itm.crossmobile"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <!-- GCM permissions -->
+    <permission
+        android:name="mobile.cross.itm.crossmobile.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="mobile.cross.itm.crossmobile.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Blacknwhite" >
+        <activity
+            android:name="mobile.cross.itm.crossmobile.Intro"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustUnspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>           
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.crossmobile.Main"
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="adjustUnspecified" >
+            
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.crossmobile.Register"
+            android:label="@string/title_activity_register"
+            android:windowSoftInputMode="adjustUnspecified" >
+        </activity>
+        <activity            
+            android:name="mobile.cross.itm.upload.EnrollProduct"
+            android:label="@string/title_activity_enroll_product"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.crossmobile.Login"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustUnspecified" >
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.detail.ProductsDetailed"
+            android:label="@string/title_activity_products_detailed"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustUnspecified" >
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.upload.RequestProduct"
+            android:label="@string/title_activity_request_product" >
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.chatting.ChatActivity"
+            android:label="@string/title_activity_chat_activity"
+            android:windowSoftInputMode="adjustUnspecified" >
+        </activity>
+
+        <service android:name="mobile.cross.itm.crossmobile.GCMIntentService" />
+
+        <!-- GCM 서비스로부터 브로드캐스트 메시지를 받을 수신자 -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- 메시지 수신 -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- 등록 ID 수신 -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="mobile.cross.itm.crossmobile" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="mobile.cross.itm.detail.ProductEdited"
+            android:label="@string/title_activity_product_edited" >
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.userinfo.UserInfoUpdate"
+            android:label="@string/title_activity_user_info_update" >
+        </activity>
+        <activity
+            android:name="mobile.cross.itm.category.CategoryDetailView"
+            android:label="@string/title_activity_category_detail_view" >
+        </activity>
+    </application>
+
+</manifest>

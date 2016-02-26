@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/product_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/feed_item_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/feed_item_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/feed_item_margin" >
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="270dp"
+                    android:layout_height="292dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/feed_item_margin"
+                    android:layout_weight="7.50"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/product_image_default"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingBottom="5dp"
+                        android:text="상품명" />
+
+                    <TextView
+                        android:id="@+id/product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:text="상품 가격"
+                        android:textColor="@color/wine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/feed_item_margin" >
+
+                        <TextView
+                            android:id="@+id/product_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/feed_item_margin"
+                            android:background="@drawable/edit_text_black"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/product_method"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_black"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/product_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="상품 설명" />
+
+                    <TextView
+                        android:id="@+id/product_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="시간"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/feed_item_timestamp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/feed_item_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/feed_item_margin" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/feed_item_margin"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/product_host_image"
+                        android:layout_width="@dimen/feed_item_profile_pic"
+                        android:layout_height="@dimen/feed_item_profile_pic"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_action_person" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/product_host_email"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="올린이"
+                            android:textSize="@dimen/feed_item_profile_id"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/profile_msg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="상점 소개가 아직 없습니다."
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/feed_item_timestamp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/fol_bt"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:background="@drawable/edit_text_black"
+                            android:text="+"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/contact_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/edit_text_black"
+                    android:text="@string/contact_bt_label"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/feed_item_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/feed_item_margin" >
+
+                <EditText
+                    android:id="@+id/comment_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:ems="10"
+                    android:inputType="textMultiLine" >
+
+                    <requestFocus />
+                </EditText>
+
+                <Button
+                    android:id="@+id/enter_comment_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/edit_text_black"
+                    android:text="입력"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

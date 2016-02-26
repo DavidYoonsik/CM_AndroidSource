@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/feed_item_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/feed_item_margin" >
+
+    <LinearLayout
+        android:id="@+id/comment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/feed_item_margin"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/feed_item_profile_pic"
+            android:layout_height="@dimen/feed_item_profile_pic"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:contentDescription="profile_picture"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_action_person" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/comment_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/feed_item_margin"
+                    android:text="yysttong"
+                    android:textSize="@dimen/feed_item_profile_id"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/comment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12시간 전"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/feed_item_timestamp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/comment_message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="팔렸나요" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

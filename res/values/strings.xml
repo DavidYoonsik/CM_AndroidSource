@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CrossMobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_section1">SEARCH</string>
+    <string name="title_section2">FEED ITEM</string>
+    <string name="title_section3">MY ACCOUNT</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_enroll_product">EnrollProduct</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_products_detailed">ProductsDetailed</string>
+    <string name="title_activity_request_product">RequestProduct</string>
+    <string name="title_activity_chat_activity">ChatActivity</string>
+
+    <!-- SIGN IN -->
+    <string name="email_label">Email Address</string>
+    <string name="password_label">Password</string>
+    <string name="forgotten_password">Forgotten password?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="no_account_txt">Don\'t have an account?</string>
+    <string name="sign_up_link">Sign up today!</string>
+
+    <!-- REGISTER -->
+    <string name="sign_up">SIGN UP</string>
+    <string name="name_label">Name</string>
+    <string name="phone_label">Phone</string>
+    <string name="gender_label">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="interest_label">Interest</string>
+    <string name="clothings">Clothings</string>
+    <string name="cosmetics">Cosmetics</string>
+    <string name="books">Books</string>
+    <string name="home">Home</string>
+    <string name="pet">Pets</string>
+    <string name="edit">Edit</string>
+
+    <!-- ITEM DETAIL -->
+    <string name="contact_bt_label">판매자와 연락하기</string>
+
+    <!-- ENROLL ITEM -->
+    <string-array name="pro_type_choices">
+        <item>Product Upload</item>
+        <item>Request Upload</item>
+    </string-array>
+    <string-array name="camera_choices">
+        <item>Take Picture</item>
+        <item>Choose Picture</item>
+    </string-array>
+
+    <string name="product_category_label">Category</string>
+
+    <string-array name="category_array">
+        <item>Clothings</item>
+        <item>Cosmetics</item>
+        <item>Books</item>
+        <item>Home</item>
+        <item>Pets</item>
+    </string-array>
+
+    <string name="product_name_label">Name</string>
+    <string name="product_price_label">Price</string>
+    <string name="product_status_label">Status</string>
+
+    <string-array name="status_array">
+        <item>NEW</item>
+        <item>A+</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+
+    <string name="product_method_label">거래 형태</string>
+    <string name="method_all">무관</string>
+    <string name="method_ptop">직거래</string>
+    <string name="method_post">택배거래</string>
+    <string name="product_detail_label">Description</string>
+    <string name="product_register">UPLOAD</string>
+    <string name="cancel">BACK</string>
+
+    <!-- MYPAGE -->
+    <string name="item_label">Items</string>
+    <string name="following_label">Following</string>
+    <string name="follower_label">Follower</string>
+    <string name="profile_msg_default">아직 상점 소개가 없습니다.</string>
+
+    <string-array name="category">
+        <item>All</item>
+        <item>Clothings</item>
+        <item>Cosmetics</item>
+        <item>Books</item>
+        <item>Home</item>
+        <item>Pets</item>
+    </string-array>
+
+    <string name="title_activity_product_edited">ProductEdited</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_user_info_update">UserInfoUpdate</string>
+    <string name="title_activity_category_detail_view">CategoryDetailView</string>
+
+</resources>
